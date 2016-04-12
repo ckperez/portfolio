@@ -33,5 +33,5 @@ portfolioProjects.forEach(function(ele){
 });
 
 projects.forEach(function(proj){
-  $('#projects').append(proj.toHtml())
+  $('#projects').append(proj.toHtml());
 });

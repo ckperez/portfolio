@@ -1,0 +1,34 @@
+div[data-category]{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+div[data-category]:nth-of-type(even){
+  flex-direction: row;
+  text-align: left;
+}
+
+div[data-category]:nth-of-type(odd){
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+a{
+  color:#776752;
+  text-decoration: none;
+}
+
+.project-info{
+  max-width: 300px;
+}
+
+.project-info h1{
+  margin: 0;
+  padding-top: 0;
+}
+
+.template{
+  display: none !important;
+}

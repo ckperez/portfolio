@@ -25,7 +25,7 @@ portfolioView.handleCategoryFilter = function(){
   $('#category-filter').on('change', function(){
     if ($(this).val()){
       $('div[data-category]').hide();
-      var $selectedCategory = $('article[data-category="' + $(this).val() + '"]');
+      var $selectedCategory = $('div[data-category=' + $(this).val() + ']');
       $selectedCategory.show();
     } else {
       $('div[data-category]').show();

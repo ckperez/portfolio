@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <title>Chris Perez | Developer</title>
     <link rel="stylesheet" href="vendor/normalize.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/about.css">
   </head>
   <body>
     <header>
       <img src="img/chrisperez.png" alt="ChrisPerez.io" title="Chris Perez | Developer">
       <div class="social-icon-container">
         <ul>
-          <li><a href="https://www.linkedin.com/in/chriskperez" target="_blank"><img src="img/linkedin-blk-circ.png"></a></li>
-          <li><a href="https://github.com/ckperez" target="_blank"><img src="img/github-blk-circ.png"></a></li>
-          <li><a href="https://twitter.com/chrisperez_io" target="_blank"><img src="img/twitter-blk-circ.png"></a></li>
-          <li><a href="https://www.facebook.com/ckperez" target="_blank"><img src="img/facebook-blk-circ.png"></a></li>
+          <a href="https://www.linkedin.com/in/chriskperez" target="_blank"><li class="social icon-linkedin-with-circle"></li></a>
+          <a href="https://github.com/ckperez" target="_blank"><li class="social icon-github"></li></a>
+          <a href="https://twitter.com/chrisperez_io" target="_blank"><li class="social icon-twitter-with-circle"></li></a>
+          <a href="https://www.facebook.com/ckperez" target="_blank"><li class="social icon-facebook-with-circle"></li></a>
         </ul>
       </div>
+      <nav>
+        <ul>
+          <li class="tab" data-content="about-me">About</li>
+          <li class="tab" data-content="projects">Portfolio</li>
+        </ul>
+        <div id="filter">
+          <select id="category-filter">
+            <option value=""> - Filter by Category - </option>
+          </select>
+        </div>
+      </nav>
     </header>
     <main>
-      <section id="projects">
+      <section id="projects" class="tab-content">
           <div class="template" data-category="none">
             <div class="project-info">
                 <a class="project-link" href=""><h1>Title</h1></a>
@@ -29,6 +42,21 @@
             <a class="project-link" href=""><img src=""></a>
           </div>
         </section>
+        <section id="about-me" class="tab-content">
+          <h1>About Me</h1>
+          <article>
+            <section class="bio">
+              <p>My name is Chris Perez, and I am a web developer and content marketing specialist living in Seattle. I value simple design, intuitive UI, engaging UX, and content worth sharing.</p>
+              <p>I jumped into the world of software development because I love languages. I studied formal linguistics at The University of Arizona and spent 5 years as a copywriter and editor for a marketing firm. I also love to solve problems by building things--from tables to sound systems. As a developer, I get to build new products and solve interesting problems, all while learning new languages and nit-picking syntax.</p>
+            </section>
+            <section class="call-to-action">
+              <h1>Need a product built or a problem solved?</h1>
+              <h2>I'm available for freelance, contract, and consulting.</h2>
+              <p>If you are trying to get a project off the ground, looking to take your website to the next level, or hoping to reach more of the right kind of customers, I can help! Send me a message to tell me about your needs, or just to share a clever annecdote.</p>
+              <a href="mailto:chris@chrisperez.io"><button>REACH OUT</button></a>
+            </section>
+          </article>
+        </section>
     </main>
     <footer>
       <p>&copy; Chris Perez 2016</p>
@@ -36,5 +64,6 @@
     <script src="vendor/jQuery-2.2.3.min.js"></script>
     <script src="scripts/portfolioData.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/portfolioView.js"></script>
   </body>
 </html>

@@ -1,5 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit:300|Exo:400,300,100,700);
+
 body{
   margin: auto;
+  font-family: 'Exo', sans-serif;
 }
 
 header{
@@ -15,16 +18,61 @@ header{
   box-shadow: 0 8px 16px 4px #FFF;
 }
 
-#projects{
+.social{
+  padding: 0 10px;
+  font-size: 1.3em;
+}
+
+header a{
+  color: black;
+}
+
+header a:hover{
+  color: #776752;
+}
+
+.social-icon-container ul{
+  padding-left: 100px;
+  margin-top: 0px;
+  z-index: 100;
+}
+#projects, #about-me{
   padding-top: 180px;
 }
 
 img[title]{
-  max-width: 600px;
+  max-width: 480px;
+  margin-bottom: -16px;
 }
 
 header ul, header li{
   display: inline-block;
+}
+
+nav ul{
+  padding: 0;
+  margin: 0;
+  transform: translateY(-10px);
+}
+
+nav li:first-of-type{
+  padding-right: 40px;
+}
+
+nav li{
+  color: #776752;
+  font-size: 1.2em;
+}
+nav li:hover{
+  opacity: .7;
+  cursor: pointer;
+}
+
+select{
+  color: #5C5C5C;
+  border: 0;
+  font-size: 14px;
+  text-align: center;
 }
 
 li img{

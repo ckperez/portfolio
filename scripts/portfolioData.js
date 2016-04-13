@@ -11,7 +11,7 @@ var portfolioProjects = [
     title: 'Duplicated for testing',
     tagline: 'Lorem ipsum yadda yadda. Flim flam, llama llama ding dong. Doloret sin amet. And stuff like that. I wonder how much I should write about my projects.',
     projectURL: 'http://ckperez.github.io/hackerhangout',
-    category: 'design',
+    category: 'hacking',
     imgPath: 'img/hackerhangout.png',
     projectCompleted: '2016-02-10'
   },
@@ -19,7 +19,7 @@ var portfolioProjects = [
     title: 'Duplicated for testing',
     tagline: 'A visual and interactive rating site for helping developers and remote workers find a place to work',
     projectURL: 'http://ckperez.github.io/hackerhangout',
-    category: 'design',
+    category: 'ecommerce',
     imgPath: 'img/hackerhangout.png',
     projectCompleted: '2016-04-01'
   }

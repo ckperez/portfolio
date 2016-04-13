@@ -33,14 +33,16 @@ header a:hover{
 
 .social-icon-container ul{
   padding-left: 100px;
-  margin-top: -90px;
+  margin-top: 0px;
+  z-index: 100;
 }
-#projects{
+#projects, #about-me{
   padding-top: 180px;
 }
 
 img[title]{
   max-width: 480px;
+  margin-bottom: -16px;
 }
 
 header ul, header li{
@@ -64,6 +66,13 @@ nav li{
 nav li:hover{
   opacity: .7;
   cursor: pointer;
+}
+
+select{
+  color: #5C5C5C;
+  border: 0;
+  font-size: 14px;
+  text-align: center;
 }
 
 li img{

@@ -19,7 +19,6 @@ PortfolioItem.prototype.toHtml = function(){
   $newProject.find('img').attr('src', this.imgPath);
   $newProject.find('time[pubdate]').attr('title', this.projectCompleted);
   $newProject.find('time').html('Added to portfolio about ' + parseInt((new Date() - new Date(this.projectCompleted)) / 60 / 60 / 24 / 1000) + ' days ago');
-  $newProject.append('<hr>');
   $newProject.removeClass('template');
   return $newProject;
 };

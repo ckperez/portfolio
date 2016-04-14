@@ -3,96 +3,69 @@
 body{
   margin: auto;
   font-family: 'Exo', sans-serif;
+  padding: 0;
+  font-size: 100%;
 }
 
 header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  position: fixed;
-  margin: auto;
-  padding-top: 28px;
-  margin-top: -20px;
+  font-size: 1em;
   width: 100%;
-  box-shadow: 0 8px 16px 4px #FFF;
+  min-width: 320px;
+  padding-top: 12px;
+  position: static;
+  top: 0;
+  background-color: #FFF;
 }
 
-.social{
+header img{
+  position: relative;
+  width: 80%;
+  max-width:100%;
+  margin: 0 10%;
+}
+
+main{
+  width: 100%;
+  margin: auto;
   padding: 0 10px;
-  font-size: 1.3em;
 }
-
-header a{
-  color: black;
+#filter{
+  margin: auto;
+  text-align: center;
 }
-
-header a:hover{
-  color: #776752;
-}
-
-.social-icon-container ul{
-  padding-left: 100px;
-  margin-top: 0px;
-  z-index: 100;
-}
-#projects, #about-me{
-  padding-top: 180px;
-}
-
-img[title]{
-  max-width: 480px;
-  margin-bottom: -16px;
-}
-
-header ul, header li{
-  display: inline-block;
-}
-
-nav ul{
-  padding: 0;
-  margin: 0;
-  transform: translateY(-10px);
-}
-
-nav li:first-of-type{
-  padding-right: 40px;
-}
-
-nav li{
-  color: #776752;
-  font-size: 1.2em;
-}
-nav li:hover{
-  opacity: .7;
-  cursor: pointer;
-}
-
-select{
+select {
   color: #5C5C5C;
   border: 0;
   font-size: 14px;
   text-align: center;
+  margin: .2em auto;
 }
 
-li img{
-  width: 25px;
-  margin: -90px 10px 0 10px;
-  z-index: 101;
+.template{
+  display: none;
 }
- hr, section{
-   max-width: 960px;
-   margin: auto;
- }
 
- hr{
-   margin: 12px 0;
- }
+a{
+  color:#776752;
+  text-decoration: none;
+}
 
- footer{
-   width: 100%;
-   background-color: white;
-   text-align: center;
-   margin: auto;
-   box-shadow: 0 -8px 16px 4px #FFF;
- }
+p{
+  margin: 0 auto 1em auto;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding-top: 1em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: 380px){
+  header img{
+    position: relative;
+    width: 80%;
+    max-width:100%;
+    margin: auto;
+}

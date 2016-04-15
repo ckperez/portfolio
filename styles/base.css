@@ -50,13 +50,7 @@ a{
   text-decoration: none;
 }
 
-p{
-  margin: 0 auto 1em auto;
-}
-
 footer {
-  position: absolute;
-  bottom: 0;
   padding-top: 1em;
   margin: 0 auto;
   text-align: center;

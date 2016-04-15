@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>Chris Perez | Developer</title>
-    <link rel="stylesheet" href="vendor/zerofy.css">
-    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="vendor/styles/zerofy.css">
+    <link rel="stylesheet" href="vendor/styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/state.css">
-    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/project-modules.css">
     <link rel="stylesheet" href="styles/about.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script id="projects-template" type="text/x-handlebars-template">
+      <div class="" data-category="{{category}}">
+        <div class="project-info">
+            <a class="project-link" href="{{projectURL}}"><h1>{{title}}</h1></a>
+            <h2>{{tagline}}</h2><time pubdate title="{{projectCompleted}}" datetime="2000-01-01">Added to Portfolio about {{daysAgo}} days ago</time>
+        </div>
+        <a class="project-link" href="{{projectURL}}"><img src="{{imgPath}}"></a>
+      </div>
+    </script>
   </head>
   <body>
     <header>
@@ -39,36 +48,31 @@
     </header>
     <main>
       <section id="projects" class="tab-content">
-          <div class="template" data-category="none">
-            <div class="project-info">
-                <a class="project-link" href=""><h1>Title</h1></a>
-                <h2>Tagline</h2><time pubdate datetime="2000-01-01">Added to Portfolio</time>
-            </div>
-            <a class="project-link" href=""><img src=""></a>
-          </div>
-        </section>
-        <section id="about-me" class="tab-content">
-          <h1>About Me</h1>
-          <article>
-            <section class="bio">
-              <p>My name is Chris Perez, and I am a web developer and content marketing specialist living in Seattle. I value simple design, intuitive UI, engaging UX, and content worth sharing.</p>
-              <p>I jumped into the world of software development because I love languages. I studied formal linguistics at The University of Arizona and spent 5 years as a copywriter and editor for a marketing firm. I also love to solve problems by building things--from tables to sound systems. As a developer, I get to build new products and solve interesting problems, all while learning new languages and nit-picking syntax.</p>
-            </section>
-            <section class="call-to-action">
-              <h1>Need a product built or a problem solved?</h1>
-              <h2>I'm available for freelance, contract, and consulting.</h2>
-              <p>If you are trying to get a project off the ground, looking to take your website to the next level, or hoping to reach more of the right kind of customers, I can help! Send me a message to tell me about your needs, or just to share a clever annecdote.</p>
-              <a href="mailto:chris@chrisperez.io"><button>REACH OUT</button></a>
-            </section>
-          </article>
-        </section>
+
+      </section>
+      <section id="about-me" class="tab-content">
+        <h1>About Me</h1>
+        <article>
+          <section class="bio">
+            <p>My name is Chris Perez, and I am a web developer and content marketing specialist living in Seattle. I value simple design, intuitive UI, engaging UX, and content worth sharing.</p>
+            <p>I jumped into the world of software development because I love languages. I studied formal linguistics at The University of Arizona and spent 5 years as a copywriter and editor for a marketing firm. I also love to solve problems by building things--from tables to sound systems. As a developer, I get to build new products and solve interesting problems, all while learning new languages and nit-picking syntax.</p>
+          </section>
+          <section class="call-to-action">
+            <h1>Need a product built or a problem solved?</h1>
+            <h2>I'm available for freelance, contract, and consulting.</h2>
+            <p>If you are trying to get a project off the ground, looking to take your website to the next level, or hoping to reach more of the right kind of customers, I can help! Send me a message to tell me about your needs, or just to share a clever annecdote.</p>
+            <a href="mailto:chris@chrisperez.io"><button>REACH OUT</button></a>
+          </section>
+        </article>
+      </section>
     </main>
     <footer>
       <p>&copy; Chris Perez 2016</p>
     </footer>
-    <script src="vendor/jQuery-2.2.3.min.js"></script>
+    <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
+    <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
     <script src="scripts/portfolioData.js"></script>
-    <script src="scripts/app.js"></script>
     <script src="scripts/portfolioView.js"></script>
+    <script src="scripts/projectsTemplate.js"></script>
   </body>
 </html>

@@ -151,7 +151,12 @@ dfn {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0 0;
 }
 
 /**
@@ -232,7 +237,7 @@ samp {
  */
 
 figure {
-  margin: 1em 40px;
+  margin: 0;
 }
 
 /**
@@ -332,8 +337,8 @@ button:-moz-focusring,
 
 fieldset {
   border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  margin: 0;
+  padding: 0;
 }
 
 /**

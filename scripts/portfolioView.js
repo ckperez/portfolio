@@ -28,7 +28,7 @@ portfolioView.handleCategoryFilter = function(){
       var $selectedCategory = $('div[data-category=' + $(this).val() + ']');
       $selectedCategory.show();
     } else {
-      $('div[data-category]').show();
+      $('div[data-category]:not(.template)').show();
     }
   });
 };

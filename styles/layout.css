@@ -1,0 +1,86 @@
+/*FIXED HEADER STYLES
+====================================*/
+header>div{
+  position: relative;
+}
+
+.social-icon-container{
+  position: absolute;
+  width: calc(100% / 3);
+  margin-top: .5em;
+  top: 30%;
+  left: 45%;
+}
+
+header ul{
+  padding: 0 !important;
+}
+
+nav ul{
+  margin:0 auto;
+}
+
+header li{
+  display: inline-block;
+  list-style: none;
+}
+
+header a{
+  color: black;
+  font-size: 4vmin;
+
+}
+
+nav{
+  width: 50%;
+  margin: 3% 25%;
+}
+
+.tab{
+  color: #776752;
+}
+
+.tab:nth-of-type(2){
+  float: right;
+}
+
+/*MOBILE CONTENT STYLES
+====================================*/
+div[data-category]:nth-of-type(2){
+  padding-top: 8px;
+}
+
+#projects, #about-me{
+  width: 100%;
+}
+
+@media only screen and (min-width: 380px){
+  header, section, main{
+    max-width: 960px;
+  }
+
+  .social-icon-container{
+    top:60%;
+  }
+
+  header a{
+    font-size: 1em;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

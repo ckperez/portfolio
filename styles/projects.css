@@ -1,34 +1,50 @@
+/*MOBILE PROJECTS AND ABOUT STYLES
+======================================*/
+
 div[data-category]{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  text-align: justify;
+  width: 100%;
 }
 
-div[data-category]:nth-of-type(even){
-  flex-direction: row;
-  text-align: left;
+div[data-category] img{
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
-div[data-category]:nth-of-type(odd){
-  flex-direction: row-reverse;
+time{
+  float: right;
   text-align: right;
+  margin: 10px 0 8px 0;
 }
 
-a{
-  color:#776752;
-  text-decoration: none;
+@media only screen and (min-width: 380px){
+
+  div[data-category]:nth-of-type(even){
+    text-align: left;
+    float: right;
+  }
+
+  div[data-category]:nth-of-type(odd){
+    text-align: right;
+    float: left;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
-.project-info{
-  max-width: 300px;
-}
+/*
 
-.project-info h1{
-  margin: 0;
-  padding-top: 0;
-}
-
-.template{
-  display: none !important;
-}
+}*/

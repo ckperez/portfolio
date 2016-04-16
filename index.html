@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/state.css">
     <link rel="stylesheet" href="styles/project-modules.css">
     <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/header.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script id="projects-template" type="text/x-handlebars-template">
       <div class="" data-category="{{category}}">
@@ -17,8 +18,9 @@
             <a class="project-link" href="{{projectURL}}"><h1>{{title}}</h1></a>
             <h2>{{tagline}}</h2><time pubdate title="{{projectCompleted}}" datetime="2000-01-01">Added to Portfolio about {{daysAgo}} days ago</time>
         </div>
-        <a class="project-link" href="{{projectURL}}"><img src="{{imgPath}}"></a>
+        <a class="project-link" href="{{projectURL}}"><div class="project-pic"><img src="{{imgPath}}"></div></a>
       </div>
+      <div class="clearfix">
     </script>
   </head>
   <body>
@@ -66,6 +68,7 @@
         </article>
       </section>
     </main>
+    <div class="clearfix"></div>
     <footer>
       <p>&copy; Chris Perez 2016</p>
     </footer>

@@ -17,7 +17,6 @@ Project.prototype.findDaysAgo = function(){
   this.daysAgo = parseInt((new Date() - new Date(this.projectCompleted)) / 60 / 60 / 24 / 1000);
 };
 
-
 portfolioProjects.forEach(function(projTempArrayObj){
   projectsTemplateArray.push(new Project(projTempArrayObj));
 });

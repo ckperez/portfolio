@@ -1,7 +1,38 @@
+.project-info a{
+  text-decoration: none;
+  color: #776752;
+}
+
+
+
+
+
+
+
+
+
+
+time{
+  display: inline-block;
+  width: 100%
+  float: right;
+  text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*MOBILE PROJECTS AND ABOUT STYLES
 ======================================*/
 
-div[data-category]{
+/*div[data-category]{
   text-align: justify;
   width: 100%;
 }
@@ -28,7 +59,7 @@ time{
     text-align: right;
     float: left;
   }
-
+*/
 
 
 

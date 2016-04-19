@@ -33,8 +33,12 @@ portfolioView.handleCategoryFilter = function(){
   });
 };
 
-$(document).ready(function(){
+portfolioView.initIndexPage = function(){
+  Project.all.forEach(function(instantiatedProject){
+    $('#projects').append(instantiatedProject.toMyPortfolio());
+  });
+
   portfolioView.handleNavTabs();
   portfolioView.populateFilter();
   portfolioView.handleCategoryFilter();
-});
+};

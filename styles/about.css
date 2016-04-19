@@ -1,3 +1,6 @@
+#about-me{
+  max-width: 95%;
+}
 section>h1, section>h2{
   width: 100%;
   text-align: center;
@@ -5,12 +8,27 @@ section>h1, section>h2{
 }
 
 section>p{
-  width: 100%;
+  width: 95%;
+  margin: auto;
+  text-align: left;
+  margin-bottom: 8px;
 }
 
 section>p, section>h1, section>h2{
   margin-left: 8px;
   margin-right: 8px;
+}
+
+.call-to-action{
+  margin-top: 40px;
+}
+
+.call-to-action h2{
+  margin-bottom: 32px;
+}
+
+.call-to-action p{
+  text-align: center;
 }
 
 .bio{
@@ -26,6 +44,7 @@ button{
   width: 200px;
   height: 50px;
   color: white;
+  margin-top: 40px;
 }
 
 

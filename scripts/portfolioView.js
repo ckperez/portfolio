@@ -1,4 +1,5 @@
 (function(module){
+
   var portfolioView = {};
 
   portfolioView.handleNavTabs = function(){
@@ -16,7 +17,7 @@
         var val = $(this).attr('data-category');
         var optionTag = '<option value="' + val + '">' + val + '</option>';
         if ($('#category-filter option[value="' + val + '"]').length === 0) {
-          $('#category-filter').append(optionTag); //now our data is dynamic. ER
+          $('#category-filter').append(optionTag);
         }
       }
     });
@@ -46,15 +47,13 @@
       }
     }, [])
     .length;
-
-    $('footer').append('<p>As of today, I have developed or contributed to ' + numProjects + ' projects in ' + numCategories + ' unique categories.<p>');
+    $('footer').append('<p>As of today, I have developed or contributed to <span>' + numProjects + '</span> projects in <span>' + numCategories + '</span> unique categories.<p>');
   };
 
   portfolioView.initIndexPage = function(){
     Project.all.forEach(function(instantiatedProject){
       $('#projects').append(instantiatedProject.toMyPortfolio());
     });
-
     portfolioView.handleNavTabs();
     portfolioView.populateFilter();
     portfolioView.handleCategoryFilter();
@@ -62,4 +61,5 @@
   };
 
   module.portfolioView = portfolioView;
+
 }) (window);

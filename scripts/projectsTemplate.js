@@ -10,19 +10,13 @@
     return template(this);
   };
 
-  Project.all = [];
-
   Project.loadAll = function(dataFromJSON){
     dataFromJSON.sort(function(a,b){
       return (new Date(b.projectCompleted)) - (new Date(a.projectCompleted));
     });
-
     Project.all = dataFromJSON.map(function(ele){
       return new Project(ele);
     });
-    // dataFromJSON.forEach(function(ele){
-    //   Project.all.push(new Project(ele));
-    // });
   };
 
   Project.fetchAll = function(){
@@ -47,4 +41,5 @@
   };
 
   module.Project = Project;
+
 }) (window);

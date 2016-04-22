@@ -9,11 +9,12 @@ body{
 
 main{
   min-width: 320px;
+  max-width: 960px;
   padding: 0;
   margin: 0 auto;
 }
 
-a div{
+.project-pic{
   width: 100%;
 }
 
@@ -27,15 +28,37 @@ a img{
   margin: 0 auto;
 }
 
+.image-link{
+  display: block;
+}
+
 @media only screen and (min-width: 768px){
 
-  a div{
+  .project-pic{
     width: 60%;
   }
 
   .project-info{
     width: 40%;
   }
+/*
+  .project-pic:nth-of-type(odd){
+    float: left;
+  }
+
+  .project-info:nth-of-type(odd){
+    float: left;
+    text-align: left;
+  }
+
+  .project-pic:nth-of-type(even){
+    float:right;
+  }
+
+  .project-info:nth-of-type(even){
+    float: right;
+    text-align: right;
+  }*/
 
 }
 

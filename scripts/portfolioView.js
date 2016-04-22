@@ -7,6 +7,7 @@
       $('.tab-content').hide();
       var $selectedTab = $(this).attr('data-content');
       $('#' + $selectedTab).show();
+      $('#category-filter').prop('selectedIndex', 0).trigger('change');
     });
     $('nav .tab:nth-of-type(2)').click();
   };

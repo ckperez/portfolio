@@ -42,6 +42,10 @@ nav ul, nav li{
   float: left;
 }
 
+nav a{
+  color: #776752;
+}
+
 nav li{
   width: 80px;
   font-size: 18px;

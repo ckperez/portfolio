@@ -39,8 +39,8 @@
       </div>
       <nav>
         <ul>
-          <li class="tab" data-content="about-me">About</li>
-          <li class="tab" data-content="projects">Portfolio</li>
+          <li class="tab" data-content="about-me"><a href="/about">About</a></li>
+          <li class="tab" data-content="projects"><a href="/">Portfolio</a></li>
         </ul>
         <div id="filter">
           <select id="category-filter">
@@ -72,12 +72,16 @@
     <footer>
       <p>&copy; Chris Perez 2016</p>
     </footer>
+    <script src="vendor/scripts/page.js"></script>
     <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
     <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
     <script src="scripts/projectsTemplate.js"></script>
     <script src="scripts/portfolioView.js"></script>
-    <script>
+    <script src="scripts/portfolioController.js"></script>
+    <script src="scripts/aboutController.js"></script>
+    <script src="scripts/routes.js"></script>
+    <!-- <script>
       Project.fetchAll();
-    </script>
+    </script> -->
   </body>
 </html>

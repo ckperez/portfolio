@@ -19,7 +19,7 @@
     });
   };
 
-  Project.fetchAll = function(){
+  Project.fetchAll = function(next){
     $.ajax({
       type: 'HEAD',
       url: 'data/portfolioData.json',
@@ -27,13 +27,13 @@
         var eTag = xhr.getResponseHeader('eTag');
         if (eTag === localStorage.eTag){
           Project.loadAll(JSON.parse(localStorage.stashedPortfolioData));
-          portfolioView.initIndexPage();
+          next();
         } else {
           $.getJSON('data/portfolioData.json', function(data){
             Project.loadAll(data);
             localStorage.stashedPortfolioData = JSON.stringify(data);
             localStorage.eTag = eTag;
-            portfolioView.initIndexPage();
+            next();
           });
         }
       }

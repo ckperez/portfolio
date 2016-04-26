@@ -2,15 +2,6 @@
 
   var portfolioView = {};
 
-  portfolioView.handleNavTabs = function(){
-    $('nav').on('click', '.tab', function(){
-      $('.tab-content').hide();
-      var $selectedTab = $(this).attr('data-content');
-      $('#' + $selectedTab).show();
-    });
-    $('nav .tab:nth-of-type(2)').click();
-  };
-
   portfolioView.populateFilter = function(){
     $('div[data-category]').each(function(){
       if(!$(this).hasClass('template')){
@@ -47,14 +38,17 @@
       }
     }, [])
     .length;
-    $('footer').append('<p>As of today, I have developed or contributed to <span>' + numProjects + '</span> projects in <span>' + numCategories + '</span> unique categories.<p>');
+    if ($('footer span').length === 0){
+      $('footer').append('<p>As of today, I have developed or contributed to <span>' + numProjects + '</span> projects in <span>' + numCategories + '</span> unique categories.<p>');
+    }
   };
 
   portfolioView.initIndexPage = function(){
-    Project.all.forEach(function(instantiatedProject){
-      $('#projects').append(instantiatedProject.toMyPortfolio());
-    });
-    portfolioView.handleNavTabs();
+    if ($('div[data-category]').length === 0){
+      Project.all.forEach(function(instantiatedProject){
+        $('#projects').append(instantiatedProject.toMyPortfolio());
+      });
+    };
     portfolioView.populateFilter();
     portfolioView.handleCategoryFilter();
     portfolioView.addFooterFacts();

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/modules/project-modules.css">
     <link rel="stylesheet" href="styles/modules/about.css">
     <link rel="stylesheet" href="styles/modules/header.css">
+    <link rel="stylesheet" href="styles/modules/repos.css">
     <link rel='icon' type='image/x-icon' href='/img/chrisperez-icon.png'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script id="projects-template" type="text/x-handlebars-template">
@@ -22,6 +23,9 @@
         <a class="project-link image-link" href="{{projectURL}}"><div class="project-pic"><img src="{{imgPath}}"></div></a>
       </div>
       <div class="clearfix">
+    </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+        <li><strong><a href="{{html_url}}">{{name}}</a></strong> - {{description}} <em>({{language}})</em></li>
     </script>
   </head>
   <body>
@@ -67,6 +71,12 @@
           </section>
         </article>
       </section>
+      <section class="tab-content">
+        <h1>My Last 10 Repos on Github</h1>
+        <ul id="repo-info">
+          <li></li>
+        </ul>
+      </section>
     </main>
     <div class="clearfix"></div>
     <footer>
@@ -75,13 +85,14 @@
     <script src="vendor/scripts/page.js"></script>
     <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
     <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
-    <script src="scripts/projectsTemplate.js"></script>
-    <script src="scripts/portfolioView.js"></script>
-    <script src="scripts/portfolioController.js"></script>
-    <script src="scripts/aboutController.js"></script>
+    <script src="scripts/githubToken.js"></script>
+    <script src="scripts/model/projectsTemplate.js"></script>
+    <script src="scripts/model/repos.js"></script>
+    <script src="scripts/view/portfolioView.js"></script>
+    <script src="scripts/view/repoView.js"></script>
+    <script src="scripts/controller/portfolioController.js"></script>
+    <script src="scripts/controller/aboutController.js"></script>
+    <script src="scripts/controller/repoController.js"></script>
     <script src="scripts/routes.js"></script>
-    <!-- <script>
-      Project.fetchAll();
-    </script> -->
   </body>
 </html>

@@ -39,7 +39,7 @@
     }, [])
     .length;
     if ($('footer span').length === 0){
-      $('footer').append('<p>As of today, I have developed or contributed to <span>' + numProjects + '</span> projects in <span>' + numCategories + '</span> unique categories.<p>');
+      $('footer').append('<p>As of today, I have developed or contributed to <span>' + numProjects + '</span> <a href="/repos">projects</a> in <span>' + numCategories + '</span> unique categories.<p>');
     }
   };
 

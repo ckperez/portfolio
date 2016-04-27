@@ -2,12 +2,10 @@
 
 
 footer{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin: 40px auto 0 auto;
   text-align: center;
+  float:left;
+  width: 100%;
 }
 
 footer a{

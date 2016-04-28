@@ -4,6 +4,8 @@
 footer{
   margin: 40px auto 0 auto;
   text-align: center;
+  float:left;
+  width: 100%;
 }
 
 footer a{

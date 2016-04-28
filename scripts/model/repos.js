@@ -2,17 +2,13 @@
   var repos = {};
 
   repos.requestRepos = function(callback){
-    $.ajax({
-      url: 'https://api.github.com/users/ckperez/repos' +
+    $.get('https://api.github.com/users/ckperez/repos' +
       '?per_page=10' +
-      '&sort=updated',
-      type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken},
-      success: function(data){
-        repos.all = data;
-        callback(data);
-      }
-    });
+      '&sort=updated')
+    .done(function(data){
+      repos.all = data;
+    })
+    .done(callback);
   };
 
   repos.with = function(attr) {

@@ -22,14 +22,14 @@
   Project.fetchAll = function(next){
     $.ajax({
       type: 'HEAD',
-      url: 'data/portfolioData.json',
+      url: '/data/portfolioData.json',
       success: function(data, message, xhr){
         var eTag = xhr.getResponseHeader('eTag');
         if (eTag === localStorage.eTag){
           Project.loadAll(JSON.parse(localStorage.stashedPortfolioData));
           next();
         } else {
-          $.getJSON('data/portfolioData.json', function(data){
+          $.getJSON('/data/portfolioData.json', function(data){
             Project.loadAll(data);
             localStorage.stashedPortfolioData = JSON.stringify(data);
             localStorage.eTag = eTag;

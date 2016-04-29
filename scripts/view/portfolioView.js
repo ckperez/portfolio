@@ -15,14 +15,8 @@
   };
 
   portfolioView.handleCategoryFilter = function(){
-    $('#category-filter').on('change', function(){
-      if ($(this).val()){
-        $('div[data-category]').hide();
-        var $selectedCategory = $('div[data-category=' + $(this).val() + ']');
-        $selectedCategory.show();
-      } else {
-        $('div[data-category]:not(.template)').show();
-      }
+    $('#filter').on('change', 'select', function(){
+      page('/category/' + $(this).val().replace(/\W+/g, '+'));
     });
   };
 
